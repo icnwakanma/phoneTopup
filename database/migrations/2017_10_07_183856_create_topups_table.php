@@ -16,6 +16,11 @@ class CreateTopupsTable extends Migration
         Schema::create('topups', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->datetime('date');
+            $table->integer('phone_number');
+            $table->string('network_provider',100);
+            $table->float('amount');
+            $table->string('topupinfo',100);
         });
     }
 
